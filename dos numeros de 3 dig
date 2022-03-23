@@ -1,0 +1,21 @@
+# 2) Ingresar dos números de 3 dígitos
+# cada uno (x,y) intercalar sus dígitos.
+# Ejemplo:
+#    x=876
+#    y=462
+#    nuevo num= 847662
+a , b =  map( int, input("Ingrese dos números de 3 dígitos").split())
+
+while (100>a or a>999) or (100>b or b>999): #validamos 3 dígitos en a y b
+    a , b =  map( int, input("Ingrese dos números de 3 dígitos").split())
+print("los número son", a, " y ", b)
+#intercalar dígitos
+prim= a//100# el primer dígito es de a
+seg= b//100# el segundo dígito es de b
+ter= (a%100)//10 #el tercer dígito es el dígito del medio de a
+cua= (b%100)//10 #el cuarto dígito es el dígito del medio de b
+qui= a%10 #el quito dígito es el último dígito de a
+sec= b%10 #el sexto dígito es el último dígito de b
+nuevo= prim*100000 + seg*10000 +ter*1000 + cua*100 + qui*10 + sec
+print("el nuevo número es ",nuevo)
+
