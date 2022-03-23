@@ -1,0 +1,18 @@
+# 1) Ingresar un numero
+# de más de 2 dígitos mostrar el mayor PAR y el menor IMPAR
+n=int(input("Ingrese un número de MÁS de 2 dígitos"))
+while n<10:
+    n=int(input("Ingrese un número de MÁS de 2 dígitos"))
+print("El número es ",n)
+num=n+1 #para tener el número mayor y no mayor o igual
+n=n-1 #para tener el número menor y no menor igual
+# número par
+if n%2==0:
+    n -=1 #si el número es par le restamos 1 para que sea impar
+print("El número menor impar es ", n)
+
+for i in range(1):
+    if num%2==0:
+        print("El número mayor par es ", num)
+    else:
+        num +=1 # le sumamos 1 para volverlo par
